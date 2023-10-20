@@ -55,7 +55,19 @@
     <p>Đẹp như là tháng 10 có 20 😘</p>
     <button onclick="redirectToFlowerPage()">Nhấp Vào Đây</button>
 
+    <audio id="myAudio" src="y2meta.com - Ông Xã Em Number One - DON NGUYEN (128 kbps) (1).mp3"></audio>
+    <button onclick="toggleAudio()">Phát/Ngừng Nhạc</button>
+
     <script>
+        var audio = document.getElementById("myAudio");
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
         function redirectToFlowerPage() {
             window.location.href = "flowers.html";
         }
